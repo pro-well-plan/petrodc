@@ -17,7 +17,11 @@ These instructions will get you a copy of the project up and running on your loc
 ## Quick Use
 
 > import petrodc.npd as dc
-> 
+>
+> dataframe = dc.wellbore(3)
+
+* 3 is the dataset with lithostratigraphy, check [here](https://github.com/jcamiloangarita/petrodc/blob/master/petrodc/npd/wellbore.py)
+to see the respective number for the different datasets.
 
 ## License
 
