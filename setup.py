@@ -20,5 +20,5 @@ setup(
                  'Topic :: Software Development',
                  'Topic :: Software Development :: Libraries',
                  'Topic :: Utilities'],
-    install_requires=['pandas', 'requests']
+    install_requires=['pandas', 'requests', 'numpy']
 )

@@ -1,2 +1,2 @@
-from .wellbore import *
+from .wellbore import wellbore
 
