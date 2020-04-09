@@ -5,6 +5,7 @@ import numpy as np
 
 def wellbore(dataset_number):
     """
+    Function to request wellbore data from NPD Database.
     :param dataset_number: int to select the dataset
         1: oil samples
         2: NPD ID
