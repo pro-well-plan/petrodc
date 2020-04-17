@@ -1,1 +1,1 @@
-from .elevation import elevation
+from .elevation import elevation, point_elev

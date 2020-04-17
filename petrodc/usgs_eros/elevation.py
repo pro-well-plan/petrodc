@@ -27,3 +27,15 @@ def elevation(lat=(40, 41), lon=(-65, -60)):
     df = df[['latitude', 'longitude', 'topo']].astype(float)
     df.rename(columns={'latitude': 'lat', 'longitude': 'lon', 'topo': 'elev'}, inplace=True)
     return df
+
+
+def point_elev(lat, lon):
+    minlat = lat - 0.001
+    maxlat = lat + 0.001
+    minlon = lon - 0.001
+    maxlon = lon + 0.001
+    c = elevation(lat=(minlat, maxlat), lon=(minlon, maxlon))
+    znew = round(c.elev.mean())
+
+    return znew
+
