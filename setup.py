@@ -11,7 +11,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='Juan Camilo Gonzalez Angarita',
-    author_email='camiloang94@gmail.com',
+    author_email='juan@prowellplan.com',
     keywords='petroleum data collector operations wellbore oil gas',
     classifiers=['Programming Language :: Python :: 3',
                  'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
@@ -20,5 +20,5 @@ setup(
                  'Topic :: Software Development',
                  'Topic :: Software Development :: Libraries',
                  'Topic :: Utilities'],
-    install_requires=['pandas', 'requests', 'numpy']
+    install_requires=['pandas', 'requests', 'numpy', 'plotly']
 )

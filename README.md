@@ -1,3 +1,5 @@
+![](https://user-images.githubusercontent.com/52009346/69100304-2eb3e800-0a5d-11ea-9a3a-8e502af2120b.png)
+
 ## Introduction
 PetroDC is a LGPL licensed tool to get datasets from public sources. 
 New sources are added as they are tested; suggestions and contributions of 
@@ -11,8 +13,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 * Users: Wheels for Python from [PyPI](https://pypi.python.org/pypi/petrodc/) 
     * `pip install petrodc`
-* Developers: Source code from [Github](https://github.com/jcamiloangarita/petrodc)
-    * `git clone https://github.com/jcamiloangarita/petrodc`
+* Developers: Source code from [Github](https://github.com/pro-well-plan/petrodc)
+    * `git clone https://github.com/pro-well-plan/petrodc`
 
 ## Quick Use
 
@@ -20,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 >
 > dataframe = dc.wellbore(3)
 
-* 3 is the dataset with lithostratigraphy, check [here](https://github.com/jcamiloangarita/petrodc/blob/master/petrodc/npd/wellbore.py)
+* 3 is the dataset with lithostratigraphy, check [here](https://github.com/pro-well-plan/petrodc/blob/master/petrodc/npd/wellbore.py)
 to see the respective number for the different datasets.
 
 ## License
@@ -28,4 +30,4 @@ to see the respective number for the different datasets.
 This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE](LICENSE.md) file for details
 
 
-*for further information contact camiloang94@gmail.com*
+*for further information contact juan@prowellplan.com*
