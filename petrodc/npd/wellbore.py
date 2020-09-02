@@ -55,4 +55,3 @@ def get_dataset(data):
     df = pd.DataFrame(data_list)
     df.replace('', np.nan, inplace=True)
     return df
-
