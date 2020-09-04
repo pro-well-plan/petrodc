@@ -7,7 +7,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_1(self):
         df = npd.wellbore(1)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbOilSampleBottomDepth', 'wlbName', 'wlbNPDID_wellbore',
                    'wlbOilSampleTestType', 'wlbOilSampleDateUpdated',
                    'wlbOilSampleTestDate', 'wlbOilSampleFluidType',
@@ -19,7 +19,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_2(self):
         df = npd.wellbore(2)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbWell', 'wlbWellboreName', 'wlbWellType', 'wlbNpdidWellbore', 'datesyncNPD']
         self.assertTrue(len(df) > 0, msg='No data reached')
         self.assertEqual(len(df.columns), 5, msg='Data columns have been added or removed')
@@ -27,7 +27,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_3(self):
         df = npd.wellbore(3)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['lsuNpdidLithoStratParent', 'wlbName', 'lsuBottomDepth', 'lsuLevel',
                    'lsuName', 'wlbNpdidWellbore', 'lsuNpdidLithoStrat',
                    'IsuWellboreUpdatedDate', 'datesyncNPD', 'lsuNameParent',
@@ -38,7 +38,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_4(self):
         df = npd.wellbore(4)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbHistoryDateUpdated', 'wlbName', 'wlbNPDID_wellbore', 'wlbHistory',
                    'datesyncNPD']
         self.assertTrue(len(df) > 0, msg='No data reached')
@@ -47,7 +47,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_5(self):
         df = npd.wellbore(5)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbMudWeightAtMD', 'wlbName', 'wlbMudViscosityAtMD',
                    'wlbNPDID_wellbore', 'wlbMudDateMeasured', 'wlbMudDateUpdated',
                    'wlbYieldPointAtMD', 'wlbMD', 'wlbMudType', 'datesyncNPD']
@@ -57,7 +57,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_6(self):
         df = npd.wellbore(6)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbDstTestNumber', 'wlbDstToDepth', 'wlbName', 'wlbDstChokeSize',
                    'wlbDstBottomHolePress', 'wlbDstFromDepth', 'wlbDstOilProd',
                    'wlbDstOilDensity', 'wlbDstGasProd', 'wlbDstFinShutInPress',
@@ -70,7 +70,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_7(self):
         df = npd.wellbore(7)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbDocumentFormat', 'wlbName', 'wlbDocumentDateUpdated',
                    'wlbDocumentName', 'wlbNPDID_wellbore', 'wlbDocumentType',
                    'wlbDocumentUrl', 'wlbDocumentSize', 'datesyncNPD']
@@ -80,7 +80,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_8(self):
         df = npd.wellbore(8)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbCoreNumber', 'wlbName', 'wlbCoreIntervalBottom',
                    'wlbCoreIntervalUom', 'wlbNumberOfCores', 'wlbNPDID_wellbore',
                    'wlbCoreDateUpdated', 'wlbCoreSampleAvailable', 'wlbCoreIntervalTop',
@@ -91,7 +91,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_9(self):
         df = npd.wellbore(9)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbCoreNumber', 'wlbName', 'wlbCorePhotoTitle', 'wlbNPDID_wellbore',
                    'wlbCorePhotoDateUpdated', 'wlbCorePhotoImgUrl']
         self.assertTrue(len(df) > 0, msg='No data reached')
@@ -100,7 +100,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_10(self):
         df = npd.wellbore(10)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbUtmZone', 'wlbWellType', 'wlbEwDeg', 'wlbEwCode', 'wlbEntryDate',
                    'wlbNsSec', 'wlbEwMin', 'wlbEwSec', 'wlbNsDecDeg',
                    'wlbProductionLicence', 'wlbNsDeg', 'wlbNpdidWellbore',
@@ -114,7 +114,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_11(self):
         df = npd.wellbore(11)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbHoleDepth', 'wlbName', 'wlbCasingDiameter', 'wlbNPDID_wellbore',
                    'wlbLotMudDencity', 'wlbCasingDateUpdated', 'wlbFormationTestType',
                    'datesyncNPD', 'wlbHoleDiameter', 'wlbCasingType', 'wlbCasingDepth']
@@ -124,7 +124,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_12(self):
         df = npd.wellbore(12)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbNpdidWellboreReclass', 'wlbPluggedDate', 'wlbEwCode',
                    'wlbSeismicLocation', 'wlbMultilateral', 'wlbAgeWithHc2',
                    'fclNpdidFacilityDrilling', 'wlbEntryDate', 'wlbAgeWithHc1', 'wlbNsSec',
@@ -157,7 +157,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_13(self):
         df = npd.wellbore(13)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbNpdidWellboreReclass', 'wlbPluggedDate', 'wlbEwCode',
                    'wlbMultilateral', 'fclNpdidFacilityDrilling', 'wlbEntryDate',
                    'wlbNsSec', 'wlbEwMin', 'wlbEwSec', 'prlNpdidProductionLicence',
@@ -187,7 +187,7 @@ class TestNPD(TestCase):
 
     def test_wellbore_14(self):
         df = npd.wellbore(14)
-        self.assertIsInstance(df, pd.DataFrame)
+        self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         columns = ['wlbWell', 'wlbTotalDepth', 'wlbKellyBushElevation', 'wlbPluggedDate',
                    'wlbUtmZone', 'wlbWellType', 'wlbEwDeg', 'wlbDateUpdated', 'wlbEwCode',
                    'wlbSeismicLocation', 'wlbEntryDate', 'wlbNsSec', 'wlbEwMin',
