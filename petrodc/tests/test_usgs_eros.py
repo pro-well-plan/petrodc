@@ -6,7 +6,7 @@ import pandas as pd
 class TestUSGS(TestCase):
 
     def test_elevation(self):
-        df = topo.elevation(lat=(40, 41), lon=(-61, -60)).data
+        df = topo.elevation(lat=(40, 41), lon=(-61, -60)).df
         self.assertIsInstance(df, pd.DataFrame, msg='function is not returning a dataframe')
         self.assertTrue(len(df) > 0, msg='No data reached')
         self.assertEqual(len(df.columns), 3, msg='different number of columns')

@@ -38,12 +38,12 @@ def elevation(lat=(40, 41), lon=(-65, -60)):
             import plotly.graph_objects as go
             from numpy import array, unique
 
-            lon = unique(self.df.lon)
-            lat = unique(self.df.lat)
+            lon_u = unique(self.df.lon)
+            lat_u = unique(self.df.lat)
 
-            elev = array([self.df.elev[i: i + len(lon)] for i in range(0, len(self.df.elev), len(lon))])
+            elev = array([self.df.elev[i: i + len(lon_u)] for i in range(0, len(self.df.elev), len(lon_u))])
 
-            fig = go.Figure(data=[go.Surface(z=elev, x=lon, y=lat)])
+            fig = go.Figure(data=[go.Surface(z=elev, x=lon_u, y=lat_u)])
             fig.update_layout(scene=dict(
                 xaxis_title='Lon, °',
                 yaxis_title='Lat, °',
@@ -60,7 +60,6 @@ def point_elev(lat, lon):
     minlon = lon - 0.001
     maxlon = lon + 0.001
     c = elevation(lat=(minlat, maxlat), lon=(minlon, maxlon))
-    znew = round(c.data.elev.mean())
+    znew = round(c.df.elev.mean())
 
     return znew
-
