@@ -31,24 +31,25 @@ def elevation(lat=(40, 41), lon=(-65, -60)):
             df = df[['latitude', 'longitude', 'topo']].astype(float)
             df.rename(columns={'latitude': 'lat', 'longitude': 'lon', 'topo': 'elev'}, inplace=True)
 
-            self.data = df
+            self.df = df
 
         def plot(self):
 
             import plotly.graph_objects as go
             from numpy import array, unique
 
-            lon = unique(self.data.lon)
-            lat = unique(self.data.lat)
+            lon = unique(self.df.lon)
+            lat = unique(self.df.lat)
 
-            elev = array([self.data.elev[i: i + len(lon)] for i in range(0, len(self.data.elev), len(lon))])
+            elev = array([self.df.elev[i: i + len(lon)] for i in range(0, len(self.df.elev), len(lon))])
 
             fig = go.Figure(data=[go.Surface(z=elev, x=lon, y=lat)])
             fig.update_layout(scene=dict(
                 xaxis_title='Lon, °',
                 yaxis_title='Lat, °',
                 zaxis_title='Elevation, m'))
-            fig.show()
+
+            return fig
 
     return ElevationSurface()
 
