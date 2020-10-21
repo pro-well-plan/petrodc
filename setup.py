@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 setup(
     name='petrodc',
     packages=['petrodc', 'petrodc.npd', 'petrodc.usgs_eros', 'petrodc.ags'],
-    version='0.1.6',
+    version='0.1.7',
     license='LGPL v3',
     description='Petroleum Data Collector',
     long_description=long_description,
@@ -20,5 +20,5 @@ setup(
                  'Topic :: Software Development',
                  'Topic :: Software Development :: Libraries',
                  'Topic :: Utilities'],
-    install_requires=['pandas', 'requests', 'numpy', 'plotly', 'lasio']
+    install_requires=['pandas', 'requests', 'numpy', 'plotly', 'lasio', 'matplotlib']
 )
