@@ -13,7 +13,7 @@ def get_las(number_of_files):
     :return: a dictionary {'Unique well identifier': dataframe}
     """
 
-    zipfile_url = r'https://ags.aer.ca/document/SPE/SPE_006.zip'        # url to the data as a zip file
+    zipfile_url = r'https://static.ags.aer.ca/files/document/SPE/SPE_006.zip'        # url to the data as a zip file
 
     with urlopen(zipfile_url) as resp:
         with ZipFile(BytesIO(resp.read())) as zip_file:
