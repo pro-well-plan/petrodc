@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v0.1.7] - 2020-10-21
+### Fixed
+- Matplotlib as requirement 
+
+## [v0.1.6] - 2020-10-21
+### Added
+- Function plot_log for petrodc.ags to generate visualize respective well logs
+### Changed
+- New url to fetch data for petrodc.ags
+
 ## [v0.0.6] - 2020-09-10
 ### Changed
 - Data attribute as dataframe in elevation function
