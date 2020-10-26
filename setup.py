@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 setup(
     name='petrodc',
     packages=['petrodc', 'petrodc.npd', 'petrodc.usgs_eros', 'petrodc.ags'],
-    version='0.1.8',
+    version='0.1.9',
     license='LGPL v3',
     description='Petroleum Data Collector',
     long_description=long_description,

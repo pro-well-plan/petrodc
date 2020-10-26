@@ -6,12 +6,14 @@ def plot_log(logs):
     logs.dropna(axis=0, how='any', inplace=True)
 
     logs.reset_index(inplace=True)
-    logs["Depth"] = list(logs.index)
     logs = logs.replace({np.nan: None})
 
-    names = list(logs.columns[:-1])
+    names = list(logs.columns)
     if 'DEPT' in names:
+        logs["Depth"] = logs["DEPT"]
         names.pop(names.index('DEPT'))
+    else:
+        logs["Depth"] = list(logs.index)
     logs = logs.sort_values(by='Depth')
     top = logs.Depth.min()
     bot = logs.Depth.max()
