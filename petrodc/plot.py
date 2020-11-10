@@ -1,16 +1,20 @@
 import numpy as np
-import matplotlib.pyplot as plt
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 
 
-def plot_log(logs):
+def plot_log(logs, title=None):
     """
     Function to plot well logs data using matplotlib.
 
     Arguments:
         logs (dataframe): each log is a column
 
+    Keyword Arguments:
+        title (str or None): text to add as title if required
+
     Returns:
-        pyplot figure: plot
+        plotly figure: plot
     """
 
     logs.dropna(axis=0, how='any', inplace=True)
@@ -25,31 +29,20 @@ def plot_log(logs):
     else:
         logs["Depth"] = list(logs.index)
     logs = logs.sort_values(by='Depth')
-    top = logs.Depth.min()
-    bot = logs.Depth.max()
 
-    length = int((12 / 5) * len(names))
-    fig, ax = plt.subplots(nrows=1, ncols=len(names), figsize=(length, 8))
-
-    colors = ['green', 'red', 'black', 'blue', 'c', 'orange', 'pink', 'purple']
-    color = colors[0]
+    fig = make_subplots(rows=1, cols=len(names),
+                        subplot_titles=names)
+    col = 1
     for x in names:
-        ax[names.index(x)].plot(logs[x], logs.Depth, color=color)
-        if color == colors[-1]:
-            color = colors[0]
-        color = colors[colors.index(color) + 1]
+        fig.add_trace(
+            go.Scatter(x=logs[x], y=logs.Depth),
+            row=1, col=col
+        )
+        col += 1
 
-    for i in range(len(ax)):
-        ax[i].set_ylim(top, bot)
-        ax[i].invert_yaxis()
-        ax[i].grid()
+    fig.update_layout(height=600, width=800, showlegend=False)
 
-    for x in names:
-        ax[names.index(x)].set_xlim(logs[x].min(), logs[x].max())
-        ax[names.index(x)].set_xlabel(x)
-        if x == names[0]:
-            ax[names.index(x)].set_ylabel("Depth")
-        else:
-            ax[names.index(x)].yaxis.set_ticklabels([])
+    if title is not None:
+        fig.update_layout(title_text=title)
 
     return fig
