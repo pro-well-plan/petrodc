@@ -9,6 +9,10 @@ PetroDC is a LGPL licensed tool to get datasets from public sources.
 New sources are added as they are tested; suggestions and contributions of 
 all kinds are very welcome.
 
+## Documentation
+
+Check here for the [complete petrodc package documentation](https://petrodc.readthedocs.io/en/latest/).
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
