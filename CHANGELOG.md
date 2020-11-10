@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v0.1.10] - 2020-11-10
+### Changed
+- plot_log: using plotly instead of matplotlib
+
+## [v0.1.9] - 2020-10-26
+### Fixed
+- plot_log: depth column
+
+## [v0.1.8] - 2020-10-23
+### Changed
+- plot_log returns a figure
+
 ## [v0.1.7] - 2020-10-21
 ### Fixed
 - Matplotlib as requirement 
