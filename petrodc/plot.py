@@ -3,6 +3,16 @@ import matplotlib.pyplot as plt
 
 
 def plot_log(logs):
+    """
+    Function to plot well logs data using matplotlib.
+
+    Arguments:
+        logs (dataframe): each log is a column
+
+    Returns:
+        pyplot figure: plot
+    """
+
     logs.dropna(axis=0, how='any', inplace=True)
 
     logs.reset_index(inplace=True)

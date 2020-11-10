@@ -6,22 +6,26 @@ import numpy as np
 def wellbore(dataset_number):
     """
     Function to request wellbore data from NPD Database.
-    :param dataset_number: int to select the dataset
-        1: oil samples
-        2: NPD ID
-        3: lithostratigraphy
-        4: history
-        5: drilling mud
-        6: drill stem tests
-        7: documents
-        8: cores
-        9: core photos
-        10: coordinates
-        11: casing and leak off
-        12: exploration
-        13: development
-        14: shallow
-    :return: a dataframe with the data selected
+
+    Arguments:
+        dataset_number (int): to select the dataset
+            (1: oil samples,
+            2: NPD ID,
+            3: lithostratigraphy,
+            4: history,
+            5: drilling mud,
+            6: drill stem tests,
+            7: documents,
+            8: cores,
+            9: core photos,
+            10: coordinates,
+            11: casing and leak off,
+            12: exploration,
+            13: development,
+            14: shallow)
+
+    Returns:
+        dataframe: requested data
     """
 
     data_list = ['with-oil-samples', 'with-npdid', 'with-lithostratigraphy', 'with-history', 'with-drilling-mud',

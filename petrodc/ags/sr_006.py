@@ -9,8 +9,12 @@ def get_las(number_of_files):
     """
     Function to get well logs data as dataframes from Special Report 006 Athabasca Oil Sands Data
     McMurray/Wabiskaw Oil Sands Deposit (Alberta, Canada). By Alberta Geological Survey (AGS).
-    :param number_of_files: int number of files to get (max: 2173)
-    :return: a dictionary {'Unique well identifier': dataframe}
+
+    Arguments:
+        number_of_files (int): number of files to get, max. of 2173
+
+    Returns:
+        dictionary {key -> 'Unique well identifier', value -> dataframe}: data
     """
 
     zipfile_url = r'https://static.ags.aer.ca/files/document/SPE/SPE_006.zip'        # url to the data as a zip file
