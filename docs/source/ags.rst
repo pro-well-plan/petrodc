@@ -18,7 +18,7 @@ Example
 |well-log|
 
 .. |well-log| image:: /figures/well-log.png
-                    :scale: 60%
+                    :scale: 40%
 
 Web Application
 ---------------
