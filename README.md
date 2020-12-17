@@ -6,6 +6,7 @@
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Webapp](https://img.shields.io/badge/WebApp-On-green.svg)](https://share.streamlit.io/jcamiloangarita/opensource_apps/app.py)
 [![Documentation Status](https://readthedocs.org/projects/petrodc/badge/?version=latest)](http://petrodc.readthedocs.io/?badge=latest)
+[![Downloads](https://pepy.tech/badge/petrodc)](https://pepy.tech/project/petrodc)
 
 ## Introduction
 PetroDC is a LGPL licensed tool to get datasets from public sources. 
